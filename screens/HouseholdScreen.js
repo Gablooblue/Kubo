@@ -12,9 +12,9 @@ import { WebBrowser } from 'expo';
 
 import { MonoText } from '../components/StyledText';
 
-export default class HomeScreen extends React.Component {
+export default class HouseholdScreen extends React.Component {
   static navigationOptions = {
-    title: 'kubo'
+    title: Household
   };
 
   render() {
@@ -24,22 +24,15 @@ export default class HomeScreen extends React.Component {
           <View style={styles.welcomeContainer}>
             <Image
                style={styles.boxImage}
-               source={require('../assets/images/household.jpg')}
-
-            />
-            <TouchableHighlight onPress={() =>
-              LinkingIOS.openURL('../screens/HouseholdScreen.js')}>
-              <Image
-                source={require('../assets/images/household.jpg')}
-                style={{height:50, width:50}} />
-            </TouchableHighlight>
-            <Image
-               style={styles.boxImage}
-               source={require('../assets/images/office.jpg')}
+               source={require('../assets/images/kitchen.jpg')}
             />
             <Image
                style={styles.boxImage}
-               source={require('../assets/images/garden.jpg')}
+               source={require('../assets/images/plumbing.jpg')}
+            />
+            <Image
+               style={styles.boxImage}
+               source={require('../assets/images/houselight.jpg')}
             />
           </View>
 
