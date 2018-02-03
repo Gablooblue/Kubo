@@ -27,6 +27,22 @@ export default class HomeScreen extends React.Component {
 	    ]});
 	this.props.navigation.dispatch(resetAction)
     }
+    handleOffice = () => {
+	    const resetAction = NavigationActions.reset({
+	    index: 0,
+	    actions: [
+		NavigationActions.navigate({ routeName: 'Office'})
+	    ]});
+	this.props.navigation.dispatch(resetAction)
+    }
+    handleGarden= () => {
+	    const resetAction = NavigationActions.reset({
+	    index: 0,
+	    actions: [
+		NavigationActions.navigate({ routeName: 'Garden'})
+	    ]});
+	this.props.navigation.dispatch(resetAction)
+    }
 
 
     render() {
@@ -34,19 +50,24 @@ export default class HomeScreen extends React.Component {
     	    <View style={styles.container}>
         		<ScrollView style={styles.container} contentContainerStyle={styles.contentContainer}>
         		    <View style={styles.welcomeContainer}>
+				<TouchableHighlight onPress = {() => handleHousehold()}>
             			<Image
             			    style={styles.boxImage}
             			    source={require('../assets/images/household.jpg')}
-
-            			/>
+				/>
+				</TouchableHighlight>
+				<TouchableHighlight onPress = {() => handleOffice()}>
             			    <Image
             				style={styles.boxImage}
             				source={require('../assets/images/office.jpg')}
             			    />
+				</TouchableHighlight>
+				<TouchableHighlight onPress = {() => handleGarden()}>
             			    <Image
             				style={styles.boxImage}
             				source={require('../assets/images/garden.jpg')}
             			    />
+				</TouchableHighlight>
         			  </View>
               </ScrollView>
           </View>
