@@ -17,6 +17,44 @@ export default class MaintenanceScreen extends React.Component {
     static navigationOptions = {
 	title: "Maintenance"
     };
+
+    sendData = async () => {
+	var url = 'https://www.freelancer.com/api/projects/0.1/projects/?compact=';
+	var data = {
+	    "title": "I need some maintenance",
+	    "description": "My office needs maintenance"
+	    "currency": {
+		"id": 7,
+	    },
+	     "budget": {
+		"minimum": 50,
+		"maximum": 100
+	      },
+	    "jobs": [
+		    {
+		      "id": 805, 
+		    }
+		  ],
+	     "location": {
+		"city": "Quezon City",
+		"country": {
+		  "name": "Philippines"
+		},
+	    },
+	};
+	var myHeaders = new Headers({
+	    "Freelancer-OAuth-v1": "aRgAxL5lRrCRay2nhsbf9u9ZIoNId",
+	    'content-type': 'application/json'
+	});
+	var myInit = {
+	    method: 'POST',
+	    headers: myHeaders,
+	}
+	
+	fetch(url, myInit).then(res=> res.json()) 
+	.catch(error => console.error("Error: ", error))
+	    .then(response=>console.log("Success: ", response));
+    }
     
     render() {
 	return (
@@ -25,6 +63,9 @@ export default class MaintenanceScreen extends React.Component {
 		   style={styles.boxImage}
 		   source={require('../../assets/images/maintenance.jpg')}
 		/>
+		<TouchableHighlight onPress={() => sendData()}>
+		    <Text> Hire </Text>
+		</TouchableHightlight>
 	    </View>
 	)
     }
