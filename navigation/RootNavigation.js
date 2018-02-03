@@ -5,6 +5,8 @@ import { StackNavigator } from 'react-navigation';
 import HouseholdScreen from '../screens/Household/index';
 import OfficeScreen from '../screens/Office/index';
 import GardenScreen from '../screens/Garden/index';
+import MaintenanceScreen from '../screens/Office/MaintenanceScreen';
+import LightsScreen from '../screens/Office/LightsScreen';
 import MainTabNavigator from './MainTabNavigator';
 import registerForPushNotificationsAsync from '../api/registerForPushNotificationsAsync';
 
@@ -19,6 +21,8 @@ const HouseholdStack = StackNavigator(
 const OfficeStack = StackNavigator(
     {
 	Index: { screen: OfficeScreen},
+	Maintenance: { screen: MaintenanceScreen },
+	Lights: {screen: LightsScreen},
     },
     {
 	headerMode: 'none'
