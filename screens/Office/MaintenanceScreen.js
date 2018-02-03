@@ -7,7 +7,8 @@ import{
   StyleSheet,
   Text,
   TouchableHighlight,
-  View,
+    View,
+    Alert,
 } from 'react-native';
 import { WebBrowser } from 'expo';
 
@@ -48,12 +49,23 @@ export default class MaintenanceScreen extends React.Component {
 	});
 	var myInit = {
 	    method: 'POST',
+	    body: JSON.stringify(data),
 	    headers: myHeaders,
 	}
 
 	fetch(url, myInit).then(res=> res.json())
 	.catch(error => console.error("Error: ", error))
-	    .then(response=>console.log("Success: ", response));
+	    .then(response=> {
+		console.log("Success: ", response);
+		Alert.alert(
+		    'Request sent',
+		    "We're looking for a freelancer now",
+		    [
+			{text: 'Ok', style: 'cancel'},
+		    ],
+
+		)
+	    });
     }
 
     render() {
