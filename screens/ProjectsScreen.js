@@ -12,7 +12,7 @@ import {
 } from 'react-native';
 import { WebBrowser } from 'expo';
 import { Font } from 'expo';
-
+import {NavigationActions} from 'react-navigation';
 export default class ProjectsScreen extends React.Component {
     static navigationOptions = {
 	header: null,
@@ -47,8 +47,9 @@ export default class ProjectsScreen extends React.Component {
 
     render() {
 	return (
+
 	    <View style = {styles.container}>
-		<Text style={styles.title}>Projects</Text>
+		<Text style={styles.title}>PROJECTS</Text>
 		<FlatList
 		    data={this.state.data.projects}
 		    keyExtractor={(x,i) => i}
@@ -65,21 +66,25 @@ export default class ProjectsScreen extends React.Component {
 
 const styles = StyleSheet.create({
   container: {
-	   flex: 1,
+	   flex: 2,
 	    backgroundColor: '#fff',
 	     ...Platform.select({
 	        ios: {
 		          paddingTop: 30,
+              paddingBottom: 50,
 	        },
 	       }),
   },
   title: {
 	   fontSize: 30,
 	    textAlign: 'center',
+      fontWeight: 'bold'
   },
   item: {
 	   padding: 10,
 	   fontSize: 15,
 	   borderBottomWidth: 1/ PixelRatio.get(),
+     justifyContent: 'space-around',
+     flexWrap: 'wrap',
   }
 });

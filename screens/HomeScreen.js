@@ -50,19 +50,19 @@ export default class HomeScreen extends React.Component {
     	    <View style={styles.container}>
         		<ScrollView style={styles.container} contentContainerStyle={styles.contentContainer}>
         		    <View style={styles.welcomeContainer}>
-				<TouchableHighlight onPress = {() => handleHousehold()}>
+				<TouchableHighlight onPress = {() => this.handleHousehold()}>
             			<Image
             			    style={styles.boxImage}
             			    source={require('../assets/images/household.jpg')}
 				/>
 				</TouchableHighlight>
-				<TouchableHighlight onPress = {() => handleOffice()}>
+				<TouchableHighlight onPress = {() => this.handleOffice()}>
             			    <Image
             				style={styles.boxImage}
             				source={require('../assets/images/office.jpg')}
             			    />
 				</TouchableHighlight>
-				<TouchableHighlight onPress = {() => handleGarden()}>
+				<TouchableHighlight onPress = {() => this.handleGarden()}>
             			    <Image
             				style={styles.boxImage}
             				source={require('../assets/images/garden.jpg')}
