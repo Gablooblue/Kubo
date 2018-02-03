@@ -14,7 +14,7 @@ import { MonoText } from "../../components/StyledText";
 
 export default class index extends React.Component {
   static navigationOptions = {
-    title: Household
+    title: "Household"
   };
 
   render() {

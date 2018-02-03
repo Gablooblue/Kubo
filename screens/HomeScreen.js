@@ -11,6 +11,7 @@ import {
 import { WebBrowser } from 'expo';
 //import HouseholdScreen from 'Household/index';
 import { MonoText } from '../components/StyledText';
+import {NagivationActions} from 'react-navigation';
 
 export default class HomeScreen extends React.Component {
 
