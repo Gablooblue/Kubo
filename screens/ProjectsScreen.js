@@ -8,6 +8,7 @@ import {
     TouchableOpacity,
     View,
     FlatList,
+    PixelRatio,
 } from 'react-native';
 import { WebBrowser } from 'expo';
 
@@ -46,10 +47,12 @@ export default class ProjectsScreen extends React.Component {
     render() {
 	return (
 	    <View style = {styles.container}>
+		<Text style={styles.title}>Projects</Text>
 		<FlatList
 		    data={this.state.data.projects}
+		    keyExtractor={(x,i) => i}
 		    renderItem = {({item})=>
-			    <Text>
+			    <Text style= {styles.item}>
 				{ item.title }
 			    </Text>
 		    }
@@ -72,5 +75,10 @@ const styles = StyleSheet.create({
     title: {
 	fontSize: 30,
 	textAlign: 'center',
+    },
+    item: {
+	padding: 10,
+	fontSize: 15,
+	borderBottomWidth: 1/ PixelRatio.get(),
     }
 });
