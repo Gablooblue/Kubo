@@ -6,12 +6,11 @@ import {
   StyleSheet,
   Text,
   TouchableOpacity,
-  View,
+  View
 } from 'react-native';
 import { WebBrowser } from 'expo';
 
-<<<<<<< HEAD
-import { MonoText } from '../../components/StyledText';
+import { MonoText } from "../../components/StyledText";
 
 export default class index extends React.Component {
   static navigationOptions = {
@@ -44,18 +43,6 @@ export default class index extends React.Component {
     );
   }
 
-=======
-export default class HouseholdScreen extends React.Component {
-    render(){
-	return (
-	    <View style = {styles.container} >
-		<Text style = {styles.title}>
-		    Household
-		</Text>
-	    </View>
-	)
-    }
->>>>>>> 5768129e86d6e6e21fd587133cab537996bd79a5
 }
 
 const styles = StyleSheet.create({

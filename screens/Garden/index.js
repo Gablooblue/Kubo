@@ -1,6 +1,5 @@
 import React from 'react';
-<<<<<<< HEAD
-import {
+import{
   Image,
   Platform,
   ScrollView,
@@ -68,47 +67,3 @@ const styles = StyleSheet.create({
   },
 
 });
-=======
-
-import {
-    Image,
-    Platform,
-    ScrollView,
-    StyleSheet,
-    Text,
-    TouchableOpacity,
-    View,
-    FlatList,
-    PixelRatio,
-} from 'react-native';
-import { WebBrowser } from 'expo';
-
-export default class GardenScreen extends React.Component {
-    static navigationOptions = {
-	title: "Garden"
-    }
-
-    render() {
-	return (
-	    <View>
-	    </View>
-	)
-    }
-}
-
-const styles = StyleSheet.create({
-    container: {
-	flex: 1,
-	backgroundColor: '#fff',
-	...Platform.select({
-	    ios: {
-		paddingTop: 30,
-	    },
-	}),
-    },
-    title: {
-	fontSize: 30,
-	textAlign: 'center',
-    },
-})
->>>>>>> 5768129e86d6e6e21fd587133cab537996bd79a5

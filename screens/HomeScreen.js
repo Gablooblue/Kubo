@@ -13,38 +13,13 @@ import { WebBrowser } from 'expo';
 import { MonoText } from '../components/StyledText';
 
 export default class HomeScreen extends React.Component {
-<<<<<<< HEAD
+
   static navigationOptions = {
     title: 'kubo'
   };
 
-  render() {
-    return (
-      <View style={styles.container}>
-        <ScrollView style={styles.container} contentContainerStyle={styles.contentContainer}>
-          <View style={styles.welcomeContainer}>
-            <Image
-               style={styles.boxImage}
-               source={require('../assets/images/household.jpg')}
-
-            />
-            <Image
-               style={styles.boxImage}
-               source={require('../assets/images/office.jpg')}
-            />
-            <Image
-               style={styles.boxImage}
-               source={require('../assets/images/garden.jpg')}
-            />
-          </View>
-=======
-    static navigationOptions = {
-	title: 'kubo'
-    };
->>>>>>> 5768129e86d6e6e21fd587133cab537996bd79a5
-
-    handleHousehold= () => {
-	const resetAction = NavigationActions.reset({
+    handleHousehold = () => {
+	    const resetAction = NavigationActions.reset({
 	    index: 0,
 	    actions: [
 		NavigationActions.navigate({ routeName: 'Household'})
@@ -54,38 +29,28 @@ export default class HomeScreen extends React.Component {
 
 
     render() {
-	return (
-	    <View style={styles.container}>
-		<ScrollView style={styles.container} contentContainerStyle={styles.contentContainer}>
-		    <View style={styles.welcomeContainer}>
-			<Image
-			    style={styles.boxImage}
-			    source={require('../assets/images/household.jpg')}
+    	return (
+    	    <View style={styles.container}>
+        		<ScrollView style={styles.container} contentContainerStyle={styles.contentContainer}>
+        		    <View style={styles.welcomeContainer}>
+            			<Image
+            			    style={styles.boxImage}
+            			    source={require('../assets/images/household.jpg')}
 
-			/>
-			<TouchableHighlight onPress={() => this.handleHousehold}/>
-				<Image
-				    source={require('../assets/images/household.jpg')}
-				    style={{height:50, width:50}} />
-			    </TouchableHighlight>
-			    <Image
-				style={styles.boxImage}
-				source={require('../assets/images/office.jpg')}
-			    />
-			    <Image
-				style={styles.boxImage}
-				source={require('../assets/images/garden.jpg')}
-			    />
-			</View>
-
-
-<<<<<<< HEAD
-=======
-		    </ScrollView>
-
-		</View>
-	);
-    }
+            			/>
+            			    <Image
+            				style={styles.boxImage}
+            				source={require('../assets/images/office.jpg')}
+            			    />
+            			    <Image
+            				style={styles.boxImage}
+            				source={require('../assets/images/garden.jpg')}
+            			    />
+        			  </View>
+              </ScrollView>
+          </View>
+    );
+  }
 
 }
 
@@ -114,5 +79,5 @@ const styles = StyleSheet.create({
 	margin: 0
     },
 
->>>>>>> 5768129e86d6e6e21fd587133cab537996bd79a5
+
 });
