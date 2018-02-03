@@ -1,18 +1,19 @@
 import React from 'react';
 import {
-  Image,
-  Platform,
-  ScrollView,
-  StyleSheet,
-  Text,
-  TouchableOpacity,
-  View,
+    Image,
+    Platform,
+    ScrollView,
+    StyleSheet,
+    Text,
+    TouchableOpacity,
+    View,
 } from 'react-native';
 import { WebBrowser } from 'expo';
 
 import { MonoText } from '../components/StyledText';
 
 export default class HomeScreen extends React.Component {
+<<<<<<< HEAD
   static navigationOptions = {
     title: 'kubo'
   };
@@ -77,4 +78,33 @@ const styles = StyleSheet.create({
     margin: 0
   },
 
+=======
+    static navigationOptions = {
+	header: null,
+    };
+
+    render() {
+	return (
+	    <View style={styles.container}>
+		<Text style={styles.title}>Kubo</Text>
+	    </View>
+	);
+    }
+}
+
+const styles = StyleSheet.create({
+    container: {
+	flex: 1,
+	backgroundColor: '#fff',
+	...Platform.select({
+	    ios: {
+		paddingTop: 30,
+	    },
+	}),
+    },
+    title: {
+	fontSize: 30,
+	textAlign: 'center',
+    }
+>>>>>>> 63bab3c416fe2bb680b68e7abb82ae44e65b1583
 });
