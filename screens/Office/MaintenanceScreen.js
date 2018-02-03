@@ -19,10 +19,10 @@ export default class MaintenanceScreen extends React.Component {
     };
 
     sendData = async () => {
-	var url = 'https://www.freelancer.com/api/projects/0.1/projects/?compact=';
+	var url = 'https://www.freelancer-sandbox.com/api/projects/0.1/projects/?compact=';
 	var data = {
 	    "title": "I need some maintenance",
-	    "description": "My office needs maintenance"
+	    "description": "My office needs maintenance",
 	    "currency": {
 		"id": 7,
 	    },
@@ -32,7 +32,7 @@ export default class MaintenanceScreen extends React.Component {
 	      },
 	    "jobs": [
 		    {
-		      "id": 805, 
+		      "id": 805,
 		    }
 		  ],
 	     "location": {
@@ -50,12 +50,12 @@ export default class MaintenanceScreen extends React.Component {
 	    method: 'POST',
 	    headers: myHeaders,
 	}
-	
-	fetch(url, myInit).then(res=> res.json()) 
+
+	fetch(url, myInit).then(res=> res.json())
 	.catch(error => console.error("Error: ", error))
 	    .then(response=>console.log("Success: ", response));
     }
-    
+
     render() {
 	return (
 	    <View style = {styles.container}>
@@ -63,9 +63,9 @@ export default class MaintenanceScreen extends React.Component {
 		   style={styles.boxImage}
 		   source={require('../../assets/images/maintenance.jpg')}
 		/>
-		<TouchableHighlight onPress={() => sendData()}>
+		<TouchableHighlight onPress={() => this.sendData()}>
 		    <Text> Hire </Text>
-		</TouchableHightlight>
+		</TouchableHighlight>
 	    </View>
 	)
     }
