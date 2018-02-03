@@ -35,18 +35,19 @@ export default class ProjectsScreen extends React.Component {
 	});
 	var myInit = {
 	    method: 'GET',
-	    headers: myHeaders,
+	    mode: 'cors',
 	}
 	const response = await fetch("https://www.freelancer-sandbox.com/api/projects/0.1/projects/?owners\[\]=25832341", myInit);
 	const json = await response.json();
-	this.setState({data: json.results});
+	this.setState({data: json.result});
+	console.log(this.state.data.projects)
     }
 
     render() {
 	return (
 	    <View style = {styles.container}>
 		<FlatList
-		    data={this.state.data}
+		    data={this.state.data.projects}
 		    renderItem = {({item})=>
 			    <Text>
 				{ item.title }
