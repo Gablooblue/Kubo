@@ -11,6 +11,7 @@ import {
     PixelRatio,
 } from 'react-native';
 import { WebBrowser } from 'expo';
+import { Font } from 'expo';
 
 export default class ProjectsScreen extends React.Component {
     static navigationOptions = {
@@ -63,22 +64,22 @@ export default class ProjectsScreen extends React.Component {
 }
 
 const styles = StyleSheet.create({
-    container: {
-	flex: 1,
-	backgroundColor: '#fff',
-	...Platform.select({
-	    ios: {
-		paddingTop: 30,
-	    },
-	}),
-    },
-    title: {
-	fontSize: 30,
-	textAlign: 'center',
-    },
-    item: {
-	padding: 10,
-	fontSize: 15,
-	borderBottomWidth: 1/ PixelRatio.get(),
-    }
+  container: {
+	   flex: 1,
+	    backgroundColor: '#fff',
+	     ...Platform.select({
+	        ios: {
+		          paddingTop: 30,
+	        },
+	       }),
+  },
+  title: {
+	   fontSize: 30,
+	    textAlign: 'center',
+  },
+  item: {
+	   padding: 10,
+	   fontSize: 15,
+	   borderBottomWidth: 1/ PixelRatio.get(),
+  }
 });

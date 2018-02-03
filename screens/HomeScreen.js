@@ -9,11 +9,10 @@ import {
     View,
 } from 'react-native';
 import { WebBrowser } from 'expo';
-
+//import HouseholdScreen from 'Household/index';
 import { MonoText } from '../components/StyledText';
 
 export default class HomeScreen extends React.Component {
-<<<<<<< HEAD
   static navigationOptions = {
     title: 'kubo'
   };
@@ -28,12 +27,6 @@ export default class HomeScreen extends React.Component {
                source={require('../assets/images/household.jpg')}
 
             />
-            <TouchableHighlight onPress={() =>
-              LinkingIOS.openURL('../screens/HouseholdScreen.js')}>
-              <Image
-                source={require('../assets/images/household.jpg')}
-                style={{height:50, width:50}} />
-            </TouchableHighlight>
             <Image
                style={styles.boxImage}
                source={require('../assets/images/office.jpg')}
@@ -78,33 +71,4 @@ const styles = StyleSheet.create({
     margin: 0
   },
 
-=======
-    static navigationOptions = {
-	header: null,
-    };
-
-    render() {
-	return (
-	    <View style={styles.container}>
-		<Text style={styles.title}>Kubo</Text>
-	    </View>
-	);
-    }
-}
-
-const styles = StyleSheet.create({
-    container: {
-	flex: 1,
-	backgroundColor: '#fff',
-	...Platform.select({
-	    ios: {
-		paddingTop: 30,
-	    },
-	}),
-    },
-    title: {
-	fontSize: 30,
-	textAlign: 'center',
-    }
->>>>>>> 63bab3c416fe2bb680b68e7abb82ae44e65b1583
 });
