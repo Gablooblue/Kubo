@@ -76,7 +76,10 @@ export default class MaintenanceScreen extends React.Component {
 		   source={require('../../assets/images/maintenance.jpg')}
 		/>
 		<TouchableHighlight onPress={() => this.sendData()}>
-		    <Text> Hire </Text>
+      <Image
+        style={styles.boxImagee}
+        source={require('../../assets/images/button.jpg')}
+       />
 		</TouchableHighlight>
 	    </View>
 	)
@@ -96,6 +99,11 @@ const styles = StyleSheet.create({
     height: 345,
     resizeMode: 'contain',
     marginVertical: 10,
+    alignSelf: 'center',
+  },
+  boxImagee: {
+    width: 100,
+    height: 29,
     alignSelf: 'center',
   },
   boxes: {
