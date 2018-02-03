@@ -2,11 +2,36 @@ import { Notifications } from 'expo';
 import React from 'react';
 import { StackNavigator } from 'react-navigation';
 
+import HouseholdScreen from '../screens/Household/index';
+import OfficeScreen from '../screens/Office/index';
+import GardenScreen from '../screens/Garden/index';
 import MainTabNavigator from './MainTabNavigator';
 import registerForPushNotificationsAsync from '../api/registerForPushNotificationsAsync';
-import HouseholdStack from './MainStackNavigator';
-import OfficeStack from './MainStackNavigator';
-import GardenStack from './MainStackNavigator';
+
+const HouseholdStack = StackNavigator(
+    {
+	Index: { screen: HouseholdScreen },
+    },
+    {
+	headerMode: 'none'
+    }
+);
+const OfficeStack = StackNavigator(
+    {
+	Index: { screen: OfficeScreen},
+    },
+    {
+	headerMode: 'none'
+    }
+);
+const GardenStack = StackNavigator(
+    {
+	Index: { screen: GardenScreen},
+    },
+    {
+	headerMode: 'none'
+    }
+);
 
 const RootStackNavigator = StackNavigator(
     {
