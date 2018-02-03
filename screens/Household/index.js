@@ -11,7 +11,7 @@ import {
 } from 'react-native';
 import { WebBrowser } from 'expo';
 
-export default class HouseholdIndexScreen extends React.Component {
+export default class HouseholdScreen extends React.Component {
     render(){
 	return (
 	    <View style = {styles.container} >
